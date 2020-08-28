@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+	environment {
+		message = 'Hello World'
+	}
 	stages {
 		stage ('Fluffy Build') {
 			steps {
@@ -17,6 +20,7 @@ pipeline {
 		stage ('Fluffy Deploy') {
 			steps {
 				sh 'pwd'
+				echo $message
 			}
 		}
 	}
