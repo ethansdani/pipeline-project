@@ -9,7 +9,6 @@ pipeline {
 		}
 		stage ('Fluffy Test') {
 			steps {
-				sh 'sleep 10'
 				sh 'echo Success!'
 			}
 		}
