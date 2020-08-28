@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 	environment {
-		message = 'Hello World'
+		CUS_MES = "Hello World"
 	}
 	stages {
 		stage ('Fluffy Build') {
@@ -20,7 +20,7 @@ pipeline {
 		stage ('Fluffy Deploy') {
 			steps {
 				sh 'pwd'
-				echo '$message'
+				echo "Custom environment variable CUS_MES ${env.CUS_MES}"
 			}
 		}
 	}
