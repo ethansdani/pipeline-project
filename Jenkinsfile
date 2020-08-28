@@ -20,7 +20,7 @@ pipeline {
 		stage ('Fluffy Deploy') {
 			steps {
 				sh 'pwd'
-				echo $message
+				echo '${message}'
 			}
 		}
 	}
