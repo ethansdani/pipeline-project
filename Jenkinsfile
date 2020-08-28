@@ -5,6 +5,7 @@ pipeline {
 			steps {
 				sh 'echo Placeholder > test.war'
 				sh 'echo Edited Placeholder'
+				archiveArtifacts(artifacts: '*.war', fingerprint: true)
 			}
 		}
 		stage ('Fluffy Test') {
