@@ -4,16 +4,20 @@ pipeline {
 		CUS_MES = "Hello World"
 	}
 	stages {
-		stage ('Fluffy Build') {
-			steps {
-				sh 'echo Placeholder > test.war'
-				sh 'echo Edited Placeholder'
-				archiveArtifacts(artifacts: '*.war', fingerprint: true)
+		parallel {
+			stage ('Fluffy Build1') {
+				steps {
+					echo "This is build1"
+				}
+			}
+			stage ('Fluffy Build2') {
+				steps {
+					echo "This is build2"
+				}
 			}
 		}
 		stage ('Fluffy Test') {
 			steps {
-				sh 'sleep 10'
 				echo 'Success'
 			}
 		}
