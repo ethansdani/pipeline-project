@@ -3,19 +3,19 @@ pipeline {
 	stages {
 		stage ('Fluffy Build') {
 			steps {
-				echo 'Placeholder'
+				sh 'echo Placeholder'
 				sh 'echo Edited Placeholder'
 			}
 		}
 		stage ('Fluffy Test') {
 			steps {
 				sh 'sleep 10'
-				echo 'Success'
+				sh 'echo Success!'
 			}
 		}
 		stage ('Fluffy Deploy') {
 			steps {
-				echo 'Placeholder'
+				sh 'echo Placeholder'
 			}
 		}
 	}
