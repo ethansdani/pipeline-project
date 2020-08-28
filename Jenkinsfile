@@ -4,6 +4,7 @@ pipeline {
 		CUS_MES = "Hello World"
 	}
 	stages {
+		stage ('Builds') {
 		parallel {
 			stage ('Fluffy Build1') {
 				steps {
@@ -15,6 +16,7 @@ pipeline {
 					echo "This is build2"
 				}
 			}
+		}
 		}
 		stage ('Fluffy Test') {
 			steps {
