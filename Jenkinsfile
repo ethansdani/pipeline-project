@@ -15,7 +15,7 @@ pipeline {
 		}
 		stage ('Fluffy Deploy') {
 			steps {
-				echo 'Placeholder'
+				sh 'pwd'
 			}
 		}
 	}
